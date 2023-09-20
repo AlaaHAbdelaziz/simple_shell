@@ -60,11 +60,11 @@ if (st == NULL || st[0] == 0)
 return (NULL);
 for (n = 0; st[n] != '\0'; n++)
 if ((st[n] != de && st[n + 1] == de ||
-(st[n] != de && !st[n +1]) || st[n +1] == de))
+(st[n] != de && !st[n + 1]) || st[n + 1] == de))
 nuwords++;
 if (nuwords == 0)
 return (NULL);
-v = malloc((1 + nuwords) * sizeof(char *));
+v = malloc((1 + nuwords) *sizeof(char *));
 if (!v)
 return (NULL);
 for (n = 0, o = 0; o < nuwords; o++)
@@ -83,8 +83,8 @@ free(v);
 return (NULL);
 }
 for (q = 0; q < p; q++)
-v[o] [q] = st[n++];
-v[o] [q] = 0;
+v[o][q] = st[n++];
+v[o][q] = 0;
 }
 v[o] = NULL;
 return (v);
