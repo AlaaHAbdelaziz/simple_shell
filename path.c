@@ -85,3 +85,4 @@ curr_pos = i;
 i++;
 }
 return (NULL);
+}

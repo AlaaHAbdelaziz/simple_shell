@@ -30,7 +30,7 @@ free(s);
 }
 
 /**
- * realloc - reallocates a block of memory
+ * _realloc - reallocates a block of memory
  * @p: pointer to previous mallocated block
  * @old: byte size of prevoius block
  * @nw: byte size of new block

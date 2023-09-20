@@ -22,7 +22,7 @@ return (d);
 
 /**
  * _strdup - duplicates the string
- * @st: the string to duplicate
+ * @s: the string to duplicate
  * Return: pointer to the duplicated string
  */
 char *_strdup(const char *s)
@@ -61,7 +61,7 @@ m++;
 /**
  * _putchar - writes char e to stdout
  * @e: char to print
- * Return: 1 if success, -1 if failed, errno 
+ * Return: 1 if success, -1 if failed, errno
  */
 int _putchar(char e)
 {

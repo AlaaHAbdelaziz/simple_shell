@@ -4,7 +4,7 @@
  * _strncpy - copies the string
  * @d: string copy destintion
  * @s: string source
- * @n: number of chars to be copied
+ * @i: number of chars to be copied
  * Return: concatenated string
  */
 
@@ -23,7 +23,7 @@ if (n < i)
 m = n;
 while (m < i)
 {
-d[m] = '\0' ;
+d[m] = '\0';
 m++;
 }
 }
@@ -62,7 +62,7 @@ return (v);
  * @r: char to look for
  * Return: (n) a pointer to the memory area n
  */
-char *strchr(char *n, char r)
+char *_strchr(char *n, char r)
 {
 do {
 if (*n == r)

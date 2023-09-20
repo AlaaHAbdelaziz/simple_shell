@@ -13,7 +13,7 @@ if (!m)
 return (0);
 while (*m++)
 s++;
-return(s);
+return (s);
 }
 
 /**
@@ -48,7 +48,7 @@ char *starts_with(const char *hs, const char *n)
 while (*n)
 if (*n++ != *hs++)
 return (NULL);
-return ((char*)hs);
+return ((char *)hs);
 }
 
 /**
@@ -65,5 +65,5 @@ des++;
 while (*sc)
 *des++ = *sc++;
 *des = *sc;
-return(re);
+return (re);
 }

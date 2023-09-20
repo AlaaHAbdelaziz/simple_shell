@@ -20,7 +20,7 @@ if (!is_delim(str[n], de) && (is_delim(st[n + 1], de) || !st[n + 1]))
 nuwords++;
 if (nuwords == 0)
 return (NULL);
-v = malloc((1 + nuwords) * sizeof(char *));
+v = malloc((1 + nuwords) *sizeof(char *));
 if (!v)
 return (NULL);
 for (n = 0, o = 0; o < nuwords; o++)
@@ -58,7 +58,7 @@ int n, o, p, q, nuwords = 0;
 char **v;
 if (st == NULL || st[0] == 0)
 return (NULL);
-for (n = 0; st[n] != '\0; n++)
+for (n = 0; st[n] != '\0'; n++)
 if ((st[n] !+ de && st[n + 1] == de ||
 (st[n] != de && !st[n +1]) || st[n +1] == de)
 nuwords++;
