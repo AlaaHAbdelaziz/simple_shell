@@ -37,8 +37,8 @@ extern char **environ;
 
 /**
  * struct liststr - singly linked list
- * @num: the number field
- * @str: string
+ * @nu: the number field
+ * @st: string
  * @next: points to the following node
  */
 typedef struct liststr
@@ -49,7 +49,7 @@ struct liststr *next;
 } list_t;
 
 /**
- * @struct passinfo - has pseudo arguments to pass info in function
+ * struct passinfo - has pseudo arguments to pass info in function
  * @arg: a string generated from getline()
  * @argv: array of strings from arg
  * @path: the current command path string
