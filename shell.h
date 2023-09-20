@@ -56,7 +56,7 @@ struct liststr *next;
  * @argc: argument count
  * @line_count: error count
  * @err_num: error code for exit()
- * @linecount_flag: if on count this line of input
+ * @lincount_flag: if on count this line of input
  * @fname: programe filename
  * @env: linked list local copy of environ
  * @environ: custom modified copy of environ from ll env
@@ -65,7 +65,7 @@ struct liststr *next;
  * @env_changed: if the environ changed
  * @status: return status of the last command
  * @cmd_buf: address of pointer to cmd_buf
- * cmd_buf_type: cmd_type ||, &&, ;
+ * @cmd_buf_type: cmd_type ||, &&, ;
  * @readfd: the fd from which line input to be read
  * @histcount: line number count in history
  */
