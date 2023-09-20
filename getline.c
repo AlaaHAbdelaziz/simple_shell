@@ -106,7 +106,7 @@ return (r);
  * _getline - gets the next lien of input from STDIN
  * @info: parameter struct
  * @ptr: address of pointer to buffer, preallocated or NULL
- * @length: size of preallocated ptr buffer if not NULL
+ * @length:  preallocated ptr buffer if not NULL
  *
  * Return: s
 */
@@ -144,7 +144,7 @@ return (s);
 }
 
 /**
- * sigintHandler - blocks ctrl-c
+ * sigintHandler - blocking the option to use ctrl-c
  * @sig_num: the signal number
  *
  * Return: void
