@@ -29,7 +29,7 @@ else if (interactive(info))
 _putchar('\n');
 free_info(info, 0);
 }
-write_histroy(info);
+write_history(info);
 free_info(info, 1);
 if (!interactive(info) && info->status)
 exit(info->status);
@@ -67,7 +67,7 @@ builtin_table builtintbl[] = {
 };
 for (i = 0; builtintbl[i].type; i++)
 {
-if (_strcmp(info->argv[0], builtintbl[i].type == 0)
+if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
 {
 info->line_count++;
 built_in_ret = builtintbl[i].func(info);
@@ -87,10 +87,10 @@ void find_cmd(info_t *info)
 char *path = NULL;
 int i, k;
 info->path = info->argv[0];
-if (info->linecount_flag == 1)
+if (info->lincount_flag == 1)
 {
 info->line_count++;
-info->linecount_flag = 0;
+info->lincount_flag = 0;
 }
 for (i = 0, k = 0; info->arg[i]; i++)
 if (!is_delim(info->arg[i], " \t\n"))

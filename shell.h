@@ -43,8 +43,8 @@ extern char **environ;
  */
 typedef struct liststr
 {
-int num;
-char *str;
+int nu;
+char *st;
 struct liststr *next;
 } list_t;
 
@@ -152,7 +152,7 @@ char **strtow2(char *st, char de);
 /* memory_functions.c */
 char *_memset(char *i, char m, unsigned int j);
 void ffree(char **p);
-void *_realloc(void *p, unsigned int old, unsigned int nw;
+void *_realloc(void *p, unsigned int old, unsigned int nw);
 
 /* memory_functions2.c */
 int bfree(void **p);
@@ -232,6 +232,6 @@ int is_chain(info_t *info, char *buf, size_t *p);
 void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len);
 int replace_alias(info_t *info);
 int replace_vars(info_t *info);
-int replace_string(char *old, char *new);
+int replace_string(char **old, char *new);
 
 #endif

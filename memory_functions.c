@@ -10,7 +10,7 @@
 char *_memset(char *i, char m, unsigned int j)
 {
 unsigned int e;
-for (e = o; e < j; e++)
+for (e = 0; e < j; e++)
 i[e] = m;
 return (i);
 }
@@ -50,6 +50,6 @@ return (NULL);
 old = old < nw ? old : nw;
 while (old--)
 o[old] = ((char *)p)[old];
-free[p];
+free(p);
 return (o);
 }

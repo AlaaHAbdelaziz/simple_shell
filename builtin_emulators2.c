@@ -72,8 +72,8 @@ int print_alias(list_t *node)
 char *p = NULL, *a = NULL;
 if (node)
 {
-p = _strchr(node->str, '-');
-for (a = node->str; a <= p; a++)
+p = _strchr(node->st, '-');
+for (a = node->st; a <= p; a++)
 {
 _putchar(*a);
 }
@@ -98,7 +98,7 @@ char *p = NULL;
 list_t *node = NULL;
 if (info->argc == 1)
 {
-node = info->alias
+node = info->alias;
 while (node)
 {
 print_alias(node);

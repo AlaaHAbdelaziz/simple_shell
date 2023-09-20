@@ -16,7 +16,7 @@ return (NULL);
 if (!de)
 de = " ";
 for (n = 0; st[n] != '\0'; n++)
-if (!is_delim(str[n], de) && (is_delim(st[n + 1], de) || !st[n + 1]))
+if (!is_delim(st[n], de) && (is_delim(st[n + 1], de) || !st[n + 1]))
 nuwords++;
 if (nuwords == 0)
 return (NULL);
@@ -30,7 +30,7 @@ n++;
 p = 0;
 while (!is_delim(st[n + p], de) && st[n + p])
 p++;
-v[o] malloc((p + 1) * sizeof(char));
+v[o] = malloc((p + 1) * sizeof(char));
 if (!v[o])
 {
 for (p = 0; p < o; p++)
@@ -40,7 +40,7 @@ return (NULL);
 }
 for (q = 0; q < p; q++)
 v[o][q] = st[n++];
-s[o][q] = 0;
+v[o][q] = 0;
 }
 v[o] = NULL;
 return (v);
@@ -59,8 +59,8 @@ char **v;
 if (st == NULL || st[0] == 0)
 return (NULL);
 for (n = 0; st[n] != '\0'; n++)
-if ((st[n] !+ de && st[n + 1] == de ||
-(st[n] != de && !st[n +1]) || st[n +1] == de)
+if ((st[n] != de && st[n + 1] == de ||
+(st[n] != de && !st[n +1]) || st[n +1] == de))
 nuwords++;
 if (nuwords == 0)
 return (NULL);

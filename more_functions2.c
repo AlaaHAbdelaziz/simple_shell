@@ -11,7 +11,7 @@ int j = 0;
 unsigned long int result = 0;
 if (*c == '+')
 c++;
-for (j = 0; c[j] !+'\0'; j++)
+for (j = 0; c[j] != '\0'; j++)
 {
 if (c[j] >= '0' && c[j] <= '9')
 {
@@ -59,7 +59,7 @@ _putchar = _eputchar;
 if (input < 0)
 {
 _abs_ = -input;
-_Putchar('-');
+_putchar('-');
 coun++;
 }
 else
@@ -102,8 +102,8 @@ arr = flag & CONVERT_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
 p = &buffer[49];
 *p = '\0';
 do {
-*--p = arr[n % base];
-n /= base;
+*--p = arr[n % bas];
+n /= bas;
 } while (n != 0);
 if (sig)
 *--p = sig;

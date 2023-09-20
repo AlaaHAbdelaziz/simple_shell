@@ -26,7 +26,7 @@ char *p;
 
 while (node)
 {
-p = starts_with(node->str, name);
+p = starts_with(node->st, name);
 if (p && *p)
 {
 return (p);

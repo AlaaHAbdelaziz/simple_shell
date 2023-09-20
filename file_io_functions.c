@@ -50,7 +50,7 @@ return (-1);
 }
 for (node = info->history; node; node = node->next)
 {
-_putsfd(node->str, fd);
+_putsfd(node->st, fd);
 _putfd('\n', fd);
 }
 _putfd(BUF_FLUSH, fd);
@@ -80,7 +80,7 @@ if (!fstat(fd, &st))
 fsize = st.st_size;
 if (fsize < 2)
 return (0);
-but = malloc(sizeof(char) * (fsize + 1));
+buf = malloc(sizeof(char) * (fsize + 1));
 if (!buf)
 return (0);
 rdlen = read(fd, buf, fsize);

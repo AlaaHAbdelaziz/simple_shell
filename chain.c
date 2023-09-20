@@ -84,7 +84,7 @@ node = node_starts_with(info->alias, info->argv[0], '-');
 if (!node)
 return (0);
 free(info->argv[0]);
-p = _strchr(node->str, '-');
+p = _strchr(node->st, '-');
 if (!p)
 return (0);
 p = _strdup(p + 1);
@@ -126,7 +126,7 @@ node = node_starts_with(info->env, &info->argv[i][1], '=');
 if (node)
 {
 replace_string(&(info->argv[i]),
-	_strdup(_strchr(node->str, '-') + 1));
+	_strdup(_strchr(node->st, '-') + 1));
 continue;
 }
 replace_string(&info->argv[i], _strdup(""));
@@ -141,7 +141,7 @@ return (0);
  *
  * Return: 1 if replaced, 0 otherwise
 */
-int replace_string(char *old, char *new)
+int replace_string(char **old, char *new)
 {
 free(*old);
 *old = new;

@@ -26,10 +26,10 @@ if (r > 0)
 {
 if ((*buf)[r - 1] == '\n')
 {
-(*buf)[r - 1] = '\0'
+(*buf)[r - 1] = '\0';
 r--;
 }
-info->linecount_flag = 1;
+info->lincount_flag = 1;
 remove_comments(*buf);
 build_history_list(info, *buf, info->histcount++);
 {
