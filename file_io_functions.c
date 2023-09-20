@@ -66,7 +66,7 @@ return (1);
 */
 int read_history(info_t *info)
 {
-int i, last = 0, linecount = 0;
+int i, last = 0, lincount = 0;
 ssize_t fd, rdlen, fsize = 0;
 struct stat st;
 char *buf = NULL, *filename = get_history_file(info);
@@ -93,14 +93,14 @@ for (i = 0; i < fsize; i++)
 if (buf[i] == '\n')
 {
 buf[i] = 0;
-build_history_list(info, buf + last, linecount++);
+build_history_list(info, buf + last, lincount++);
 last = i + 1;
 }
 }
 if (last != i)
-build_history_list(info, buf + last, linecount++);
+build_history_list(info, buf + last, lincount++);
 free(buf);
-info->histcount = linecount;
+info->histcount = lincount;
 while (info->histcount-- >= HIST_MAX)
 delete_node_at_index(&(info->history), 0);
 renumber_history(info);
@@ -111,17 +111,17 @@ return (info->histcount);
  * build_history_list - adds entry to a history linked list
  * @info: Structure containing potential arguments. Used to maintain
  * @buf: buffer
- * @linecount: the history linecount, histcount
+ * @lincount: the history linecount, histcount
  * Return: 0
 */
-int build_history_list(info_t *info, char *buf, int linecount)
+int build_history_list(info_t *info, char *buf, int lincount)
 {
 list_t *node = NULL;
 if (info->history)
 {
 node = info->history;
 }
-add_node_end(&node, buf, linecount);
+add_node_end(&node, buf, lincount);
 if (!info->history)
 {
 info->history = node;

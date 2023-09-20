@@ -63,10 +63,9 @@ builtin_table builtintbl[] = {
 	{"unsetenv", _myunsetenv},
 	{"cd", _mycd},
 	{"alias", _myalias},
-	{NULL, NULL},
+	{NULL, NULL}
 };
 for (i = 0; builtintbl[i].type; i++)
-{
 if (_strcmp(info->argv[0], builtintbl[i].type) == 0)
 {
 info->line_count++;
@@ -118,7 +117,6 @@ print_error(info, "not found\n");
 
 /**
  * fork_cmd - forks a an exec thread to run cmd
- * @info: the parameter & return info struct
  * @info: the parameter & return info struct
  *
  * Return: void
