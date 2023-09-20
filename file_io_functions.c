@@ -141,7 +141,7 @@ list_t *node = info->history;
 int i = 0;
 while (node)
 {
-node->num = i++;
+node->nu = i++;
 node = node->next;
 }
 return (info->histcount = i);

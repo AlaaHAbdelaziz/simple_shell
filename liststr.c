@@ -48,6 +48,7 @@ new_node = malloc(sizeof(list_t));
 if (!new_node)
 return (NULL);
 _memset((void *)new_node, 0, sizeof(list_t));
+new_node->nu = nu;
 if (st)
 {
 new_node->st = _strdup(st);

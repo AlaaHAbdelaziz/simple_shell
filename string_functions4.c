@@ -59,8 +59,8 @@ char **v;
 if (st == NULL || st[0] == 0)
 return (NULL);
 for (n = 0; st[n] != '\0'; n++)
-if ((st[n] != de && st[n + 1] == de ||
-(st[n] != de && !st[n + 1]) || st[n + 1] == de))
+if ((st[n] != de && st[n + 1] == de) ||
+(st[n] != de && !st[n + 1]) || st[n + 1] == de)
 nuwords++;
 if (nuwords == 0)
 return (NULL);
